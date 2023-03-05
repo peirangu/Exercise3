@@ -22,11 +22,11 @@ public class Main
         LocalDate returnDate = LocalDate.parse(returnString);
         System.out.println("ChildrenPassengers:");
         int childrenPassengers = scanner.nextInt();
-        System.out.println("AdultPassengers:");
+        System.out.println("AdultPassengers: ");
         int adultPassengers = scanner.nextInt();
         FlightBooking flightBooking = new FlightBooking(passengerFullName,depart,returnDate,childrenPassengers,adultPassengers);
 
-        System.out.println(flightBooking);
+      System.out.println(flightBooking);
 
     }
 }
