@@ -130,21 +130,22 @@ public class FlightBooking {
    public String toString(){
       return "Dear "+passengerFullName+". Thank you for booking your flight with "+flightCompany+".\nFollowing are the details of your booking and the trip:\nTicket Number: "+ticketNumber+"\nFrom "+tripSource+" to "+tripDestination+"\nDate of departure: "+departureDate+"\nDate of return: "+ returnDate+"\nTotal passengers: "+totalPassengers+"\nTotal ticket price in Euros: "+totalTicketPrice;
    }
-   /*private char getRandomCapital(){
+   private char getRandomCapital(){
       Random random = new Random();
       return (char)((random.nextInt(26) + 65));
-   }*/
+   }
 
    public void setFlightID() {
-     /* String chars = null;
-      for (int i=0;i<5;i++){
-         char c = getRandomCapital();
+      String chars =String.valueOf(getRandomCapital());
+
+      for (int i=0;i<4;i++){
+         char c =  getRandomCapital();
          chars = chars + String.valueOf(c);
-      }*/
+      }
       int midNumber = (int)((Math.random()+1)*1000);
-      /*String flightID = chars.indexOf(0)+chars.indexOf(1)+chars.indexOf(2)+String.valueOf(midNumber)+chars.indexOf(3)+chars.indexOf(4);
-      this.flightID = flightID;*/
-      String flightID = "FOF"+String.valueOf(midNumber)+"IN";
+      String flightID = String.valueOf(chars.charAt(0))+String.valueOf(chars.charAt(1))+String.valueOf(chars.charAt(2))+String.valueOf(midNumber)+String.valueOf(chars.charAt(3))+String.valueOf(chars.charAt(4));
+      this.flightID = flightID;
+      /*String flightID = "FOF"+String.valueOf(midNumber)+"IN";*/
       this.flightID=flightID;
    }
 }

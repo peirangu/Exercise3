@@ -2,6 +2,7 @@ package exercise3.flight.booking.system;
 
 
 import java.time.LocalDate;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main
@@ -26,9 +27,6 @@ public class Main
         FlightBooking flightBooking = new FlightBooking(passengerFullName,depart,returnDate,childrenPassengers,adultPassengers);
 
         System.out.println(flightBooking);
-        flightBooking.setFlightID();
-        System.out.println(flightBooking.getFlightID());
-
 
     }
 }
